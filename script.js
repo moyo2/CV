@@ -32,20 +32,25 @@ const showMessage = (event) => {
 const element = document.getElementById('hover-element');
 element.addEventListener('mouseover', showMessage);
 
-// Get all navigation links
-const navLinks = document.querySelectorAll('.nav-link');
 
-// Attach click event listener to each navigation link
-navLinks.forEach(link => {
-  link.addEventListener('click', event => {
-    event.preventDefault(); // prevent default link behavior
 
-    // Get the ID of the section to scroll to
-    const sectionId = link.getAttribute('href');
+// Get all the links with an ID starting with 'nav-' (the navigation links)
+const navLinks = document.querySelectorAll('a[href^="#nav-"]');
 
-    // Use smooth scrolling to scroll to the section
-    document.querySelector(sectionId).scrollIntoView({
+// Loop through each navigation link
+navLinks.forEach(function(link) {
+  // Add a click event listener to the link
+  link.addEventListener('click', function(event) {
+    // Prevent the default link behavior
+    event.preventDefault();
+
+    // Get the section ID from the link href attribute (excluding the leading '#nav-')
+    const sectionId = this.getAttribute('href').slice(5);
+
+    // Scroll to the corresponding section using a smooth scroll effect
+    document.getElementById(sectionId).scrollIntoView({
       behavior: 'smooth'
     });
   });
 });
+

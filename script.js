@@ -31,3 +31,21 @@ const showMessage = (event) => {
 
 const element = document.getElementById('hover-element');
 element.addEventListener('mouseover', showMessage);
+
+// Get all navigation links
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Attach click event listener to each navigation link
+navLinks.forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault(); // prevent default link behavior
+
+    // Get the ID of the section to scroll to
+    const sectionId = link.getAttribute('href');
+
+    // Use smooth scrolling to scroll to the section
+    document.querySelector(sectionId).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});

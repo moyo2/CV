@@ -1,0 +1,119 @@
+                                                
+                                                <!-- this script is provided by www.htmlfreecode.com coded by: Kerixa Inc. -->
+<style>
+/* VARIABLES */
+/* BASE STYLES */
+ body {
+     color: #1f4e5f;
+     font: 400 100%/1.4 "Lato", sans-serif;
+     background-image: radial-gradient(#1f4e5f 10%, #79a8a9 100%);
+     background-size: 2000px 2000px;
+     background-position: center;
+}
+ .flex {
+     position: relative;
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+}
+ .heading {
+     color: #f4f7f7;
+     font-size: 1rem;
+     padding-bottom: 2rem;
+     text-transform: uppercase;
+     opacity: 0.85;
+}
+/* THE LIST ITSELF */
+ .list {
+     font-size: 1.15rem;
+}
+ .list__item {
+     position: relative;
+     padding: 1.5em;
+     line-height: 1;
+     perspective: 150px;
+     background-color: #f4f7f7;
+     white-space: nowrap;
+}
+ .list__item::before, .list__item::after {
+     position: absolute;
+     top: 0;
+     display: block;
+     height: 0;
+     width: 0;
+     content: "";
+     border: 0 solid transparent;
+}
+ .list__item::after {
+     right: 0;
+}
+ .list__item::before {
+     left: 0;
+}
+ .list__item:nth-child(even) {
+     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, transparent 100%);
+}
+ .list__item:nth-child(even)::before, .list__item:nth-child(even)::after {
+     border-top-color: #1f4e5f;
+     border-top-width: 4em;
+}
+ .list__item:nth-child(even)::before {
+     border-right-width: 5px;
+}
+ .list__item:nth-child(even)::after {
+     border-left-width: 5px;
+}
+ .list__item:nth-child(odd) {
+     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+}
+ .list__item:nth-child(odd)::before, .list__item:nth-child(odd)::after {
+     border-bottom-color: #1f4e5f;
+     border-bottom-width: 4em;
+}
+ .list__item:nth-child(odd)::before {
+     border-right-width: 5px;
+}
+ .list__item:nth-child(odd)::after {
+     border-left-width: 5px;
+}
+ .list__item-text {
+     display: inline-block;
+}
+ .list__item:nth-child(odd) .list__item-text {
+     transform: rotateX(-7deg);
+}
+ .list__item:nth-child(even) .list__item-text {
+     transform: rotateX(7deg);
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css'>
+
+
+<section class="flex">
+	<h1 class="heading">
+		<span>
+			A folded list
+		</span>
+	</h1>
+	<ul class="list">
+	
+		<li class="list__item">
+			<span class="list__item-text">HtmlFreeCode</span>
+		</li>
+		<li class="list__item">
+			<span class="list__item-text">HtmlFreeCode</span>
+		</li>
+		<li class="list__item">
+			<span class="list__item-text">HtmlFreeCode</span>
+		</li>
+		<li class="list__item">
+			<span class="list__item-text">HtmlFreeCode</span>
+		</li>
+	</ul>
+</section>
+<a target='_blank' href='www.htmlfreecode.com' style='font-size: 8pt; text-decoration: none'>Html Free Codes</a>                                                
+                                            

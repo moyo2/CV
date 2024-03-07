@@ -35,7 +35,7 @@ button {
 }
 
 #my-section {
-  display: none;
+  display: flex;
 }
 
 #hover-element {
